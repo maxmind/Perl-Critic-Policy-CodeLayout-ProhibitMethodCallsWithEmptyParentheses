@@ -1,0 +1,41 @@
+## name empty
+## failures 1
+## cut
+
+$foo->bar()
+
+#-----------------------------------------------------------------------------
+
+## name empty chain
+## failures 1
+## cut
+
+$foo->bar->baz()
+
+#-----------------------------------------------------------------------------
+
+## name with args
+## failures 0
+## cut
+
+$foo->bar( fred => 1 )
+
+#-----------------------------------------------------------------------------
+
+## name odd list
+## failures 0
+## cut
+
+# makes no sense, but don't want to trigger!
+$foo->bar[]
+
+#-----------------------------------------------------------------------------
+
+# Local Variables:
+#   mode: cperl
+#   cperl-indent-level: 4
+#   fill-column: 78
+#   indent-tabs-mode: nil
+#   c-indentation-style: bsd
+# End:
+# ex: set ts=8 sts=4 sw=4 tw=78 ft=perl expandtab shiftround :
